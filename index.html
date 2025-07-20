@@ -3,287 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Digitação de Palavras</title>
+    <title>Meus Links de Afiliados de Bitcoin</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the game */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fff7ee00; /* Light blue-gray background - User's custom color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
+            background-color: #f3f4f6; /* Light gray background */
         }
-        .game-container {
-            background-color: #fa9108f1; /* User's custom color */
-            border-radius: 1.5rem; /* More rounded corners */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 2.5rem; /* Increased padding */
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem; /* Space between elements */
-        }
-        .game-image {
-            width: 100%;
-            height: 200px; /* Fixed height for consistency */
-            object-fit: contain; /* Ensure the image fits within the bounds */
-            border-radius: 0.75 rem; /* Rounded corners for image */
-            background-color: #ffffff; /* Light gray background for image area */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #4a5568;
-            border: 3px dashed #94a3b8; /* Dashed border for placeholder */
-        }
-        .input-field {
-            padding: 0.75rem 1rem;
-            border: 2px solid #cbd5e0; /* Light border */
-            border-radius: 0.5rem; /* Rounded corners */
-            width: 100%;
-            font-size: 1.125rem;
-            text-align: center;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .input-field:focus {
-            border-color: #3b82f6; /* Blue border on focus */
-        }
-        .game-button {
-            background-color: #3b82f6; /* Blue button */
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1.125rem;
-            cursor: pointer;
-            transition: background-color 0.2s, transform 0.1s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border: none;
-        }
-        .game-button:hover {
-            background-color: #2563eb; /* Darker blue on hover */
-            transform: translateY(-1px);
-        }
-        .game-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .message {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #10b981; /* Green for success */
-        }
-        .message.error {
-            color: #ef4444; /* Red for error */
-        }
-        .score-timer {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.125rem;
-            font-weight: bold;
-            color: #4a5568;
-        }
-        .hidden {
-            display: none;
+        .gradient-bg {
+            background: linear-gradient(to right, #f7931a, #f0b90b); /* Binance-like gradient */
         }
     </style>
 </head>
-<body>
-    <div class="game-container">
-        <h1 class="text-3xl font-extrabold text-gray-800 mb-4">Qual é o Game?</h1>
+<body class="flex flex-col min-h-screen">
 
-        <div class="game-image" id="gameImage">
-            Clique em "Iniciar Jogo"
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">
+                Meus Links de Afiliados Crypto
+            </h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#binance" class="text-gray-600 hover:text-gray-900 font-medium">Binance</a></li>
+                    <li><a href="#freebitcoin" class="text-gray-600 hover:text-gray-900 font-medium">FreeBitcoin</a></li>
+                    <li><a href="#cointiply" class="text-gray-600 hover:text-gray-900 font-medium">Cointiply</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <input type="text" id="wordInput" class="input-field" placeholder="Digite o nome do jogo aqui..." disabled>
-
-        <div class="score-timer">
-            <span id="scoreDisplay">Pontuação: 0</span>
-            <span id="timerDisplay">Tempo: 60s</span>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 text-center shadow-lg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-extrabold mb-4 leading-tight">
+                Descubra as Melhores Plataformas de Criptomoedas!
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Junte-se a mim e comece sua jornada no mundo das criptomoedas com as plataformas mais confiáveis e recompensadoras.
+            </p>
+            <a href="#links" class="bg-white text-orange-500 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Meus Links
+            </a>
         </div>
+    </section>
 
-        <p id="messageDisplay" class="message"></p>
+    <!-- Affiliate Links Section -->
+    <main id="links" class="flex-grow container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div class="flex justify-center gap-4">
-            <button id="startButton" class="game-button">Iniciar Jogo</button>
-            <button id="resetButton" class="game-button hidden">Reiniciar</button>
+            <!-- Binance Card -->
+            <div id="binance" class="bg-white rounded-xl shadow-lg p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-6">
+                    <!-- Binance Icon (Placeholder - replace with actual SVG if desired) -->
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">Binance</h3>
+                </div>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    A Binance é a maior corretora de criptomoedas do mundo em volume de negociação. Oferece uma vasta gama de serviços, incluindo compra e venda de criptos, staking, poupança e muito mais. É a plataforma ideal para iniciantes e traders experientes.
+                </p>
+                <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00UC6QBF8M" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300 ease-in-out shadow-md">
+                    Cadastre-se na Binance
+                </a>
+            </div>
+
+            <!-- FreeBitcoin Card -->
+            <div id="freebitcoin" class="bg-white rounded-xl shadow-lg p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-6">
+                    <!-- FreeBitcoin Icon (Placeholder) -->
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mr-4 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 01-8 8v-8H2z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">FreeBitcoin</h3>
+                </div>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    FreeBitcoin é um site popular que permite que você ganhe pequenas quantidades de Bitcoin a cada hora através de um jogo simples. Além disso, oferece juros sobre o seu saldo, loteria e outras maneiras de aumentar seus ganhos.
+                </p>
+                <a href="https://freebitco.in/?r=3985825" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out shadow-md">
+                    Ganhe Bitcoin Grátis
+                </a>
+            </div>
+
+            <!-- Cointiply Card -->
+            <div id="cointiply" class="bg-white rounded-xl shadow-lg p-8 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-6">
+                    <!-- Cointiply Icon (Placeholder) -->
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mr-4 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">Cointiply</h3>
+                </div>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Cointiply é uma faucet de Bitcoin e Dogecoin que oferece várias maneiras de ganhar criptomoedas, como completar pesquisas, assistir a vídeos, jogar jogos e muito mais. É uma ótima forma de acumular criptos de forma divertida.
+                </p>
+                <a href="http://cointiply.com/r/60vdp" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out shadow-md">
+                    Explore a Cointiply
+                </a>
+            </div>
+
         </div>
-    </div>
+    </main>
 
-    <script>
-        // Array of game words and their corresponding image URLs or placeholder text.
-        // If 'imageUrl' is provided, it will be used. Otherwise, 'imageText' will be used
-        // to generate a placeholder image via placehold.co.
-        const gameWords = [
-            { name: "Minecraft", imageUrl: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/02/minecraft-key-art-feature.jpg", imageText: "Minecraft Logo" },
-            { name: "Fortnite", imageUrl: "https://www.adrenaline.com.br/wp-content/uploads/2023/11/Fortnite-ganha-filtros-de-idade-para-suas-skins-e-revolta-parte-de-sua-comunidade-912x569.jpg", imageText: "Fortnite Battle Royale" },
-            { name: "Among Us", imageUrl: "https://img.utdstc.com/icon/015/d1c/015d1cecf14c3ef529e92d788304fe58aa571c4e3ebaf4d78d5eea44f693c844:200", imageText: "Among Us Crewmate" },
-            { name: "Roblox", imageUrl: "https://placehold.co/400x200/00BFFF/000000?text=Roblox", imageText: "Roblox Studio Icon" },
-            { name: "Valorant", imageUrl: "https://pbs.twimg.com/media/GPURbZoW8AEu66D.jpg", imageText: "Valorant Agent" }, // Fixed syntax error here
-            { name: "League of Legends", imageUrl: "https://www.hellomoto.com.br/wp-content/uploads/2022/04/MF-4201_Header.jpg", imageText: "LoL Champion" },
-            { name: "Call of Duty", imageUrl: "https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt476e411d696dfb08/67e603a1d66ebd1287f688e5/BO6_S3_WZ_X1-Garrison-App-1920x1080.png?imwidth=1920&imdensity=2.625", imageText: "Call of Duty Gun" },
-            { name: "Grand Theft Auto V", imageUrl: "https://sm.ign.com/ign_br/news/b/boy-convin/boy-convinces-parents-to-buy-him-grand-theft-auto_g26c.jpg", imageText: "GTA V Logo" },
-            { name: "Cyberpunk 2077", imageUrl: "https://www.adrenaline.com.br/wp-content/uploads/2023/10/Patch-2.02-de-Cyberpunk-2077-vai-corrigir-as-habilidades-passivas-do-jogo.jpg", imageText: "Cyberpunk 2077 City" },
-            { name: "The Witcher 3", imageUrl: "https://www.adrenaline.com.br/wp-content/uploads/2023/04/the-witcher-3.jpg", imageText: "Geralt of Rivia" },
-            { name: "Super Mario Bros.", imageUrl: "https://m.media-amazon.com/images/S/pv-target-images/a03a63a4fa91729cf0492dd69da3bbd5c0848cc86bd43f5929d277d8cb22912c.jpg", imageText: "Super Mario Mushroom" },
-            { name: "Pokémon", imageUrl: "https://img.odcdn.com.br/wp-content/uploads/2019/05/20190507084117.jpg", imageText: "Pokemon Pikachu" },
-            { name: "Zelda", imageUrl: "https://s2-techtudo.glbimg.com/KXXPakL0-Pt5CX80AmO6FCwKG-Q=/0x0:695x428/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/j/N/976TlDTUKRFMQbmhs5Kw/2017-03-03-screen-shot-2017-03-03-at-2.37.33-pm.png", imageText: "Zelda Triforce" },
-            { name: "Overwatch", imageUrl: "https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt030bf3d606661d3c/633f5be164fe5a7d4481a16c/overwatch-section1-feature1.png?imwidth=1920&imdensity=2.625", imageText: "Overwatch Hero" },
-            { name: "Apex Legends", imageUrl: "https://sharkiando.com/wp-content/uploads/2024/02/Apex_evolucao.jpg", imageText: "Apex Legends Character" }
-        ];
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Meus Links de Afiliados Crypto. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">
+                <a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a> |
+                <a href="#" class="text-gray-400 hover:text-white">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
 
-        // DOM elements
-        const gameImage = document.getElementById('gameImage');
-        const wordInput = document.getElementById('wordInput');
-        const scoreDisplay = document.getElementById('scoreDisplay');
-        const timerDisplay = document.getElementById('timerDisplay');
-        const messageDisplay = document.getElementById('messageDisplay');
-        const startButton = document.getElementById('startButton');
-        const resetButton = document.getElementById('resetButton');
-
-        // Game state variables
-        let currentWord = '';
-        let score = 0;
-        let timeLeft = 60; // seconds
-        let timerInterval;
-        let gameActive = false;
-
-        /**
-         * Selects a random word from the gameWords array.
-         * @returns {object} The selected word object.
-         */
-        function getRandomWord() {
-            const randomIndex = Math.floor(Math.random() * gameWords.length);
-            return gameWords[randomIndex];
-        }
-
-        /**
-         * Displays the current word's image and sets the current word for typing.
-         * It prioritizes 'imageUrl' if available, otherwise falls back to 'imageText' for a placeholder.
-         * @param {object} wordObj - The word object to display.
-         */
-        function displayWord(wordObj) {
-            currentWord = wordObj.name.toLowerCase();
-            let imageSource = '';
-
-            if (wordObj.imageUrl) {
-                // Use the provided image URL if available
-                imageSource = wordObj.imageUrl;
-            } else if (wordObj.imageText) {
-                // Fallback to placehold.co if only imageText is available
-                imageSource = `https://placehold.co/400x200/e2e8f0/4a5568?text=${encodeURIComponent(wordObj.imageText)}`;
-            } else {
-                // Default placeholder if neither imageUrl nor imageText is provided
-                imageSource = `https://placehold.co/400x200/e2e8f0/4a5568?text=Imagem+N%C3%A3o+Dispon%C3%ADvel`;
-            }
-
-            gameImage.innerHTML = `<img src="${imageSource}" alt="${wordObj.name}" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Erro+ao+carregar+imagem';">`;
-            wordInput.value = ''; // Clear input field
-            wordInput.focus(); // Focus on input field
-        }
-
-        /**
-         * Starts the game.
-         */
-        function startGame() {
-            if (gameActive) return; // Prevent multiple starts
-            gameActive = true;
-            score = 0;
-            timeLeft = 60;
-            scoreDisplay.textContent = `Pontuação: ${score}`;
-            messageDisplay.textContent = '';
-            wordInput.disabled = false;
-            startButton.classList.add('hidden');
-            resetButton.classList.remove('hidden');
-
-            displayWord(getRandomWord());
-            startTimer();
-        }
-
-        /**
-         * Starts the game timer.
-         */
-        function startTimer() {
-            clearInterval(timerInterval); // Clear any existing timer
-            timerInterval = setInterval(() => {
-                timeLeft--;
-                timerDisplay.textContent = `Tempo: ${timeLeft}s`;
-                if (timeLeft <= 0) {
-                    endGame();
-                }
-            }, 1000);
-        }
-
-        /**
-         * Ends the game.
-         */
-        function endGame() {
-            clearInterval(timerInterval);
-            gameActive = false;
-            wordInput.disabled = true;
-            messageDisplay.textContent = `Fim de jogo! Sua pontuação final é: ${score}`;
-            resetButton.classList.remove('hidden');
-            startButton.classList.add('hidden'); // Ensure start button is hidden
-        }
-
-        /**
-         * Resets the game to its initial state.
-         */
-        function resetGame() {
-            clearInterval(timerInterval);
-            gameActive = false;
-            score = 0;
-            timeLeft = 60;
-            scoreDisplay.textContent = `Pontuação: ${score}`;
-            timerDisplay.textContent = `Tempo: ${timeLeft}s`;
-            messageDisplay.textContent = 'Clique em "Iniciar Jogo" para começar.';
-            gameImage.innerHTML = 'Clique em "Iniciar Jogo"'; // Reset image placeholder
-            wordInput.value = '';
-            wordInput.disabled = true;
-            startButton.classList.remove('hidden');
-            resetButton.classList.add('hidden');
-        }
-
-        /**
-         * Checks the user's input against the current word.
-         */
-        function checkInput() {
-            if (!gameActive) return;
-
-            const typedWord = wordInput.value.toLowerCase().trim();
-
-            if (typedWord === currentWord) {
-                score++;
-                scoreDisplay.textContent = `Pontuação: ${score}`;
-                messageDisplay.textContent = 'Correto!';
-                messageDisplay.classList.remove('error');
-                displayWord(getRandomWord()); // Move to next word
-            } else {
-                messageDisplay.textContent = 'Incorreto! Tente novamente.';
-                messageDisplay.classList.add('error');
-            }
-        }
-
-        // Event Listeners
-        startButton.addEventListener('click', startGame);
-        resetButton.addEventListener('click', resetGame);
-        wordInput.addEventListener('keyup', (event) => {
-            if (event.key === 'Enter') {
-                checkInput();
-            }
-        });
-
-        // Initialize game on window load
-        window.onload = resetGame;
-    </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 freebitcoin - https://freebitco.in/?r=3985825
+cointiply - http://cointiply.com/r/60vdp
 
 In the project directory, you can run:
 
